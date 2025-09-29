@@ -1,0 +1,3 @@
+Phenotype,Tissue,Type,Method,N,CpG,Location,Gene,Beta,P
+T2D,Whole Blood,Binary,Beta,12500,cg00000029,chr1:15865,NOC2L,0.015,1.4e-06
+T2D,Whole Blood,Binary,Beta,12500,cg10000001,chr1:20000,ABC1,0.012,3.0e-05

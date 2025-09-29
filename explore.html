@@ -1,0 +1,119 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <title>Explore • Heterogeneity-Corrected EWAS Explorer</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="description" content="Interactive filtering and sorting for EWAS meta-analysis summaries (Beta, CHALM, CAMDA)." />
+  <link rel="icon" href="assets/favicon.svg" type="image/svg+xml">
+  <link rel="stylesheet" href="assets/styles.css" />
+  <script defer src="assets/theme.js"></script>
+  <script defer src="assets/explore.js"></script>
+</head>
+<body>
+  <header class="site-header">
+    <div class="nav-wrap container">
+      <a class="brand" href="index.html#home">
+        <img src="assets/logo.svg" alt="Logo" class="logo" />
+        <span class="brand-text">Heterogeneity-Corrected EWAS Explorer</span>
+      </a>
+      <nav class="nav">
+        <a href="index.html#home" class="nav-link">Home</a>
+        <a href="download.html" class="nav-link">Download</a>
+        <a href="explore.html" class="nav-link active" aria-current="page">Explore</a>
+        <a href="index.html#citation" class="nav-link">Citation</a>
+      </nav>
+      <button id="themeToggle" class="btn ghost" aria-label="Toggle color theme">Theme</button>
+    </div>
+  </header>
+
+  <main class="container section">
+    <h1 class="page-title">Explore Meta-analysis Results</h1>
+    <p class="page-subtitle">
+      Filter and sort across <strong>Phenotype</strong>, <strong>Tissue</strong>, <strong>Type</strong> (Continuous / Binary / Survival), and <strong>Method</strong> (Beta / CHALM / CAMDA).
+    </p>
+
+    <!-- Filters -->
+    <form id="filters" class="filters">
+      <div class="field">
+        <label for="phenotype">Phenotype</label>
+        <select id="phenotype" class="select">
+          <option value="">All</option>
+        </select>
+      </div>
+
+      <div class="field">
+        <label for="tissue">Tissue</label>
+        <select id="tissue" class="select">
+          <option value="">All</option>
+        </select>
+      </div>
+
+      <div class="field">
+        <label for="type">Type</label>
+        <select id="type" class="select">
+          <option value="">All</option>
+          <option>Continuous</option>
+          <option>Binary</option>
+          <option>Survival</option>
+        </select>
+      </div>
+
+      <div class="field">
+        <label for="method">Method</label>
+        <select id="method" class="select">
+          <option value="">All</option>
+          <option>Beta</option>
+          <option>CHALM</option>
+          <option>CAMDA</option>
+        </select>
+      </div>
+
+      <div class="field grow">
+        <label for="search">Search</label>
+        <input id="search" class="input" type="search" placeholder="Search gene, CpG, location…" />
+      </div>
+
+      <button type="button" id="resetBtn" class="btn ghost">Reset</button>
+    </form>
+
+    <!-- Table -->
+    <div class="table-wrap">
+      <table id="resultsTable" class="table">
+        <thead>
+          <tr>
+            <th data-sort="Phenotype">Phenotype</th>
+            <th data-sort="Tissue">Tissue</th>
+            <th data-sort="Type">Type</th>
+            <th data-sort="Method">Method</th>
+            <th data-sort="N">N</th>
+            <th data-sort="CpG">CpG</th>
+            <th data-sort="Location">Location</th>
+            <th data-sort="Gene">Gene</th>
+            <th data-sort="Beta">Beta</th>
+            <th data-sort="P">P</th>
+          </tr>
+        </thead>
+        <tbody>
+          <!-- populated by JS -->
+        </tbody>
+      </table>
+    </div>
+
+    <div class="table-footer" id="tableFooter">
+      <div id="rowCount"></div>
+      <div class="pager">
+        <button class="btn ghost" id="prevPage" disabled>&larr; Prev</button>
+        <span id="pageInfo">Page 1</span>
+        <button class="btn ghost" id="nextPage">Next &rarr;</button>
+      </div>
+    </div>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container">
+      <p>© <span id="year"></span> Heterogeneity-Corrected EWAS Explorer.</p>
+    </div>
+  </footer>
+</body>
+</html>

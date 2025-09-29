@@ -1,0 +1,3 @@
+Phenotype,Tissue,Type,Method,N,CpG,Location,Gene,Beta,P
+CAD,Whole Blood,Binary,CAMDA,15420,cg00000417,chr1:11500222,SORT1,0.017,6.0e-07
+CAD,Whole Blood,Binary,CAMDA,15420,cg10000009,chr1:11501000,YZ9,0.016,8.2e-07

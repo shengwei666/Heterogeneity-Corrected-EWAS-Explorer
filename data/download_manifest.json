@@ -1,0 +1,17 @@
+[
+  {"Phenotype":"T2D","Type":"Binary","Method":"Beta","File":"T2D_Binary_Beta.csv"},
+  {"Phenotype":"T2D","Type":"Binary","Method":"CHALM","File":"T2D_Binary_CHALM.csv"},
+  {"Phenotype":"T2D","Type":"Binary","Method":"CAMDA","File":"T2D_Binary_CAMDA.csv"},
+
+  {"Phenotype":"BMI","Type":"Continuous","Method":"Beta","File":"BMI_Continuous_Beta.csv"},
+  {"Phenotype":"BMI","Type":"Continuous","Method":"CHALM","File":"BMI_Continuous_CHALM.csv"},
+  {"Phenotype":"BMI","Type":"Continuous","Method":"CAMDA","File":"BMI_Continuous_CAMDA.csv"},
+
+  {"Phenotype":"CAD","Type":"Binary","Method":"Beta","File":"CAD_Binary_Beta.csv"},
+  {"Phenotype":"CAD","Type":"Binary","Method":"CHALM","File":"CAD_Binary_CHALM.csv"},
+  {"Phenotype":"CAD","Type":"Binary","Method":"CAMDA","File":"CAD_Binary_CAMDA.csv"},
+
+  {"Phenotype":"AD","Type":"Survival","Method":"Beta","File":"AD_Survival_Beta.csv"},
+  {"Phenotype":"AD","Type":"Survival","Method":"CHALM","File":"AD_Survival_CHALM.csv"},
+  {"Phenotype":"AD","Type":"Survival","Method":"CAMDA","File":"AD_Survival_CAMDA.csv"}
+]

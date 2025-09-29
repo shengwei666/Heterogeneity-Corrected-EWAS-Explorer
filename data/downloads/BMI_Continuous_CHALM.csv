@@ -1,0 +1,3 @@
+Phenotype,Tissue,Type,Method,N,CpG,Location,Gene,Beta,P
+BMI,Adipose,Continuous,CHALM,8300,cg00000236,chr7:523004,FTO,-0.046,8.7e-12
+BMI,Adipose,Continuous,CHALM,8300,cg10000005,chr7:523100,MNO5,-0.040,2.3e-10

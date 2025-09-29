@@ -1,0 +1,3 @@
+Phenotype,Tissue,Type,Method,N,CpG,Location,Gene,Beta,P
+AD,Brain,Survival,CAMDA,5200,cg00000620,chr11:12143543,BIN1,0.061,1.7e-08
+AD,Brain,Survival,CAMDA,5200,cg10000012,chr2:12765000,CLU,0.053,3.9e-08

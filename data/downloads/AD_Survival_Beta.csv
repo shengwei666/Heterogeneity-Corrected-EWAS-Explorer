@@ -1,0 +1,3 @@
+Phenotype,Tissue,Type,Method,N,CpG,Location,Gene,Beta,P
+AD,Brain,Survival,Beta,5200,cg00000526,chr19:45412079,APOE,0.055,4.1e-08
+AD,Brain,Survival,Beta,5200,cg10000010,chr19:45413000,ABCA7,0.042,6.5e-08

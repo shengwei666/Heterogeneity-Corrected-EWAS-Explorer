@@ -1,0 +1,78 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <title>Download • Heterogeneity-Corrected EWAS Explorer</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="description" content="Download CSV exports by Phenotype, Type, and Method." />
+  <link rel="icon" href="assets/favicon.svg" type="image/svg+xml">
+  <link rel="stylesheet" href="assets/styles.css" />
+  <script defer src="assets/theme.js"></script>
+  <script defer src="assets/download.js"></script>
+</head>
+<body>
+  <header class="site-header">
+    <div class="nav-wrap container">
+      <a class="brand" href="index.html#home">
+        <img src="assets/logo.svg" alt="Logo" class="logo" />
+        <span class="brand-text">Heterogeneity-Corrected EWAS Explorer</span>
+      </a>
+      <nav class="nav">
+        <a href="index.html#home" class="nav-link">Home</a>
+        <a href="download.html" class="nav-link active" aria-current="page">Download</a>
+        <a href="explore.html" class="nav-link">Explore</a>
+        <a href="index.html#citation" class="nav-link">Citation</a>
+      </nav>
+      <button id="themeToggle" class="btn ghost" aria-label="Toggle color theme">Theme</button>
+    </div>
+  </header>
+
+  <main class="container section">
+    <h1 class="page-title">Download Data</h1>
+    <p class="page-subtitle">Choose a <strong>Phenotype</strong>, <strong>Type</strong> (Continuous / Binary / Survival), and <strong>Method</strong> (Beta / CHALM / CAMDA) to download the corresponding CSV manifest.</p>
+
+    <!-- Filters -->
+    <form id="dlFilters" class="filters">
+      <div class="field">
+        <label for="dlPhenotype">Phenotype</label>
+        <select id="dlPhenotype" class="select">
+          <option value="">All</option>
+        </select>
+      </div>
+
+      <div class="field">
+        <label for="dlType">Type</label>
+        <select id="dlType" class="select">
+          <option value="">All</option>
+          <option>Continuous</option>
+          <option>Binary</option>
+          <option>Survival</option>
+        </select>
+      </div>
+
+      <div class="field">
+        <label for="dlMethod">Method</label>
+        <select id="dlMethod" class="select">
+          <option value="">All</option>
+          <option>Beta</option>
+          <option>CHALM</option>
+          <option>CAMDA</option>
+        </select>
+      </div>
+
+      <button type="button" id="dlResetBtn" class="btn ghost">Reset</button>
+    </form>
+
+    <!-- Results -->
+    <div id="dlResults" class="cards">
+      <!-- cards populated by JS -->
+    </div>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container">
+      <p>© <span id="year"></span> Heterogeneity-Corrected EWAS Explorer.</p>
+    </div>
+  </footer>
+</body>
+</html>

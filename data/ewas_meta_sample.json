@@ -1,0 +1,17 @@
+[
+  {"Phenotype":"T2D","Tissue":"Whole Blood","Type":"Binary","Method":"Beta","N":12500,"CpG":"cg00000029","Location":"chr1:15865","Gene":"NOC2L","Beta":0.015,"P":1.4e-06},
+  {"Phenotype":"T2D","Tissue":"Whole Blood","Type":"Binary","Method":"CHALM","N":12500,"CpG":"cg00000108","Location":"chr2:27538","Gene":"SAMD11","Beta":0.028,"P":5.0e-08},
+  {"Phenotype":"T2D","Tissue":"Whole Blood","Type":"Binary","Method":"CAMDA","N":12500,"CpG":"cg00000109","Location":"chr3:98245","Gene":"POU5F1B","Beta":0.021,"P":2.1e-07},
+
+  {"Phenotype":"BMI","Tissue":"Adipose","Type":"Continuous","Method":"Beta","N":8300,"CpG":"cg00000165","Location":"chr5:13345","Gene":"AHRR","Beta":-0.032,"P":3.2e-10},
+  {"Phenotype":"BMI","Tissue":"Adipose","Type":"Continuous","Method":"CHALM","N":8300,"CpG":"cg00000236","Location":"chr7:523004","Gene":"FTO","Beta":-0.046,"P":8.7e-12},
+  {"Phenotype":"BMI","Tissue":"Adipose","Type":"Continuous","Method":"CAMDA","N":8300,"CpG":"cg00000289","Location":"chr16:285001","Gene":"MC4R","Beta":-0.038,"P":1.2e-09},
+
+  {"Phenotype":"CAD","Tissue":"Whole Blood","Type":"Binary","Method":"Beta","N":15420,"CpG":"cg00000321","Location":"chr9:22145000","Gene":"CDKN2B-AS1","Beta":0.011,"P":4.3e-06},
+  {"Phenotype":"CAD","Tissue":"Whole Blood","Type":"Binary","Method":"CHALM","N":15420,"CpG":"cg00000412","Location":"chr9:22146010","Gene":"CDKN2A","Beta":0.020,"P":2.8e-07},
+  {"Phenotype":"CAD","Tissue":"Whole Blood","Type":"Binary","Method":"CAMDA","N":15420,"CpG":"cg00000417","Location":"chr1:11500222","Gene":"SORT1","Beta":0.017,"P":6.0e-07},
+
+  {"Phenotype":"AD","Tissue":"Brain","Type":"Survival","Method":"Beta","N":5200,"CpG":"cg00000526","Location":"chr19:45412079","Gene":"APOE","Beta":0.055,"P":4.1e-08},
+  {"Phenotype":"AD","Tissue":"Brain","Type":"Survival","Method":"CHALM","N":5200,"CpG":"cg00000612","Location":"chr19:45411941","Gene":"APOE","Beta":0.072,"P":6.0e-09},
+  {"Phenotype":"AD","Tissue":"Brain","Type":"Survival","Method":"CAMDA","N":5200,"CpG":"cg00000620","Location":"chr11:12143543","Gene":"BIN1","Beta":0.061,"P":1.7e-08}
+]
