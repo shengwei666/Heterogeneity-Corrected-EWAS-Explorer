@@ -2,46 +2,28 @@
 <html lang="en">
 <head>
   <meta charset="utf-8" />
-  <title>Heterogeneity-Corrected EWAS Explorer</title>
+  <title>Heterogeneity-Adjusted EWAS Explorer</title>
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <meta name="description" content="Explore heterogeneity-corrected EWAS meta-analyses with Beta, CHALM, and CAMDA metrics." />
+  <meta name="description" content="Explore heterogeneity-Adjusted EWAS meta-analyses with Beta, CHALM, and CAMDA metrics." />
 
-  <!-- All images are JPG and live in assets/img/ -->
   <link rel="icon" href="assets/img/logo.jpg" type="image/jpeg">
   <link rel="preload" as="image" href="assets/img/logo.jpg">
 
   <link rel="stylesheet" href="assets/styles.css" />
   <script defer src="assets/theme.js"></script>
   <script defer src="assets/main.js"></script>
-
-  <!-- Layout + Typography tweaks -->
-  <style>
-    /* Justify all paragraphs site-wide */
-    p { text-align: justify; text-justify: inter-word; }
-
-    /* Concept figure grid:
-       - Default: 2 columns (desktop/tablet)
-       - ≤719px: 1 column
-       - The .wide item spans all columns
-    */
-    .figure-grid { display: grid; gap: 1rem; grid-template-columns: repeat(2, minmax(0, 1fr)); }
-    .figure-grid .wide { grid-column: 1 / -1; }
-    @media (max-width: 719px) {
-      .figure-grid { grid-template-columns: 1fr; }
-    }
-
-    figure.concept { margin: 0; background: var(--surface, #fff); border-radius: 8px; padding: .75rem; border: 1px solid rgba(0,0,0,.06); }
-    figure.concept img { width: 100%; height: auto; border-radius: 4px; display: block; }
-    figure.concept figcaption { font-size: .9rem; line-height: 1.35; margin-top: .5rem; text-align: center; }
-  </style>
 </head>
 <body>
+  <!-- Decorative gradient background -->
+  <div class="bg-orb orb-1" aria-hidden="true"></div>
+  <div class="bg-orb orb-2" aria-hidden="true"></div>
+
   <!-- Top Navigation -->
-  <header class="site-header">
+  <header class="site-header glass">
     <div class="nav-wrap container">
-      <a class="brand" href="index.html#home" aria-label="Heterogeneity-Corrected EWAS Explorer home">
-        <img src="assets/img/logo.jpg" alt="Site logo" class="logo" />
-        <span class="brand-text">Heterogeneity-Corrected EWAS Explorer</span>
+      <a class="brand" href="index.html#home" aria-label="Heterogeneity-Adjusted EWAS Explorer home">
+        <img src="assets/img/logo.jpg" alt="" class="logo" />
+        <span class="brand-text gradient-text">Heterogeneity-Adjusted EWAS Explorer</span>
       </a>
 
       <nav class="nav" aria-label="primary">
@@ -55,79 +37,88 @@
     </div>
   </header>
 
-  <!-- Home / Hero -->
   <main id="home">
-    <section class="hero container">
-      <h1>Welcome to Heterogeneity-Corrected EWAS Explorer!</h1>
-      <p class="lede">
-        A fast, elegant portal for meta-analysis summaries across <strong>Beta</strong>, <strong>CHALM</strong>, and <strong>CAMDA</strong> methylation metrics—purpose-built to correct cellular heterogeneity and expose phenotype-associated epigenetic signals.
-      </p>
-      <div class="cta-row">
-        <a class="btn primary" href="explore.html">Start Exploring</a>
-        <a class="btn" href="download.html">Get Data</a>
+    <!-- Hero (single column). Title + lede same width as figures -->
+    <section class="hero container hero-split reveal">
+      <div class="hero-copy">
+        <h1 class="display gradient-text display-full">Welcome to Heterogeneity-Adjusted EWAS Explorer!</h1>
+        <p class="lede lede-full">
+          A fast, elegant portal for meta-analysis summaries across <strong>Beta</strong>, <strong>CHALM</strong>, and <strong>CAMDA</strong> methylation metrics—a <strong>Heterogeneity-Adjusted</strong> framework that recovers DNA methylation markers overlooked by conventional Beta-based EWAS.
+        </p>
+        <div class="cta-row">
+          <a class="btn primary btn-lg" href="explore.html">Start Exploring</a>
+          <a class="btn outline btn-lg" href="download.html">Get Data</a>
+        </div>
+        <ul class="hero-highlights">
+          <li><span class="dot"></span>Interactive exploration: filter by Phenotype, Tissue, Type, and Method;</li>
+          <li><span class="dot"></span>Interactive exploration: search CpG/Gene/Location;</li>
+          <li><span class="dot"></span>Reproducible downloads: browse datasets with tags and sizes, then download matching CSVs.</li>
+        </ul>
       </div>
+      <!-- right visual intentionally removed -->
     </section>
 
-    <!-- Introduction -->
-    <section class="section container">
-      <h2>Introduction</h2>
-      <p>
-        Genome-wide DNA methylation arrays have powered large-scale epigenome-wide association studies (EWAS), yet conventional quantification based on averaged methylation levels often collapses critical cell-to-cell variability, blunting statistical power and biological interpretability—especially in complex, heterogeneous tissues. To overcome this limitation, we develop a principled data transformation that maps array-derived average methylation measurements into two heterogeneity-aware metrics—<em>CHALM</em> and <em>CAMDA</em>—to sharpen effect estimates and reveal disease-relevant epigenetic patterns with higher fidelity.
+    <!-- Overview above figures -->
+    <section class="section container reveal">
+      <h3 class="h2-tight"> Why Heterogeneity-Adjusted Methylation Metrics for Array-based EWAS?</h3>
+      <p class="justify">
+          Epigenome-wide association studies (EWAS) provide a scalable framework to map CpG-phenotype relationships in large populations. Despite limited genomic coverage, DNA methylation microarrays remain the workhorse for EWAS owing to their throughput and cost-effectiveness. However, conventional array quantification based on the Beta value—an averaged methylation metric—cannot capture methylation heterogeneity, limiting sensitivity to phenotype-associated signals and downstream discovery. Heterogeneity-adjusted methylation metrics such as
+          <strong><a href="https://www.nature.com/articles/s41467-020-20492-7" target="_blank" rel="noopener" aria-label="CHALM paper on Nature Communications">CHALM</a></strong>
+          (Cell Heterogeneity-Adjusted cLonal Methylation; Xu et al., <em>Nat Commun</em>, 2021) and
+          <strong><a href="https://www.nature.com/articles/s41467-021-25521-7" target="_blank" rel="noopener" aria-label="CAMDA paper on Nature Communications">CAMDA</a></strong>
+          (Concurrence of Active Methylation and De-methylAtion; Shi et al., <em>Nat Commun</em>, 2021), originally defined on bisulfite-sequencing reads, capture clonal structure and concurrent methylation/demethylation dynamics, but are not directly available for array data.
       </p>
-
-      <!-- CHALM / CAMDA links -->
-      <p>
-        <strong><a href="https://www.nature.com/articles/s41467-020-20492-7" target="_blank" rel="noopener" aria-label="CHALM paper on Nature Communications">CHALM</a></strong>
-        (Cell Heterogeneity-Adjusted cLonal Methylation; Xu et al., <em>Nat Commun</em>, 2021) quantifies the promoter methylation as the ratio of methylated reads (with ≥1 mCpG) to total reads mapped to a given promoter region.
-        <strong><a href="https://www.nature.com/articles/s41467-021-25521-7" target="_blank" rel="noopener" aria-label="CAMDA paper on Nature Communications">CAMDA</a></strong>
-        (Concurrence of Active Methylation and De-methylAtion; Shi et al., <em>Nat Commun</em>, 2021) quantifies the concurrence of active DNA methylation and demethylation within the same cell by dissecting reads from bisulfite sequencing.
+      <p class="justify">
+        To overcome this limitation, we develop a principled transformation that maps array-derived Beta measurements to heterogeneity-adjusted surrogates of CHALM and CAMDA, enabling heterogeneity-aware EWAS on microarrays. Leveraging this representation, we perform multi-cohort EWAS meta-analyses to increase statistical power and robustness. Across phenotypes and tissues, the approach consistently recovers DNA methylation markers underdetected by Beta-based analyses while reducing confounding from tissue composition, thereby advancing epigenome-wide discovery of phenotype-associated CpG sites and strengthening translational utility for biomarker discovery, risk stratification, and target nomination.
       </p>
-      <p>
-        When propagated through EWAS meta-analyses, CHALM and CAMDA consistently enhance detection of disease-associated CpGs—including subtle yet functionally meaningful signals—while reducing noise and confounding from tissue composition. This framework opens a path for large-scale, heterogeneity-corrected EWAS that advances biomarker discovery, clarifies the causal axes of methylation dynamics in disease onset and progression, and strengthens precision medicine by improving early diagnosis, prognosis stratification, and target nomination.
-      </p>
-      <p>
+      <p class="justify">
         This website hosts curated summaries across phenotypes, tissues, and analytical types (Continuous, Binary, Survival), with harmonized effect estimates under Beta, CHALM, and CAMDA. Use <strong>Explore</strong> for rich interactive filtering and sorting, or head to <strong>Download</strong> for reproducible CSV exports matching your selections.
       </p>
-
-      <!-- Concept figures:
-           Row 1: CHALM | CAMDA
-           Row 2: Project (full width)
-      -->
-      <div class="figure-grid" aria-label="Concept figures for CHALM, CAMDA, and the project">
-        <figure class="concept">
-          <img src="assets/img/CHALM.jpg" alt="CHALM concept figure" loading="lazy">
-          <figcaption><strong>CHALM, Xu et al., <em>Nat Commun</em> (2021)</strong></figcaption>
-        </figure>
-        <figure class="concept">
-          <img src="assets/img/CAMDA.jpg" alt="CAMDA concept figure" loading="lazy">
-          <figcaption><strong>CAMDA, Shi et al., <em>Nat Commun</em> (2021)</strong></figcaption>
-        </figure>
-        <figure class="concept wide">
-          <img src="assets/img/Project.jpg" alt="Project overview concept figure" loading="lazy">
-          <figcaption><strong></strong></figcaption>
-        </figure>
-      </div>
     </section>
 
-    <!-- Citation -->
-    <section id="citation" class="section container">
-      <h2>Citation</h2>
-      <p>
-        If you use <em>Heterogeneity-Corrected EWAS Explorer</em>, please cite:
+    <!-- Concept figures (hover to lift) -->
+    <section class="section container reveal">
+      <div class="figure-grid">
+        <!-- 1) first image full row -->
+        <figure class="concept float full">
+          <img src="assets/img/Project.jpg" alt="Project overview concept figure" loading="lazy">
+        </figure>
+
+        <!-- 2) two half-width images -->
+        <figure class="concept float">
+          <img src="assets/img/CHALM.jpg" alt="CHALM concept figure" loading="lazy">
+          <figcaption><strong>CHALM</strong> — Xu et al., <em>Nat Commun</em> (2021)</figcaption>
+        </figure>
+
+        <figure class="concept float">
+          <img src="assets/img/CAMDA.jpg" alt="CAMDA concept figure" loading="lazy">
+          <figcaption><strong>CAMDA</strong> — Shi et al., <em>Nat Commun</em> (2021)</figcaption>
+        </figure>
+      </div>
+
+      <!-- Note under CHALM & CAMDA (justified) -->
+      <p class="justify" style="margin-top:10px;">
+        <strong>Note:</strong> <strong>CHALM</strong> quantifies the promoter methylation as the ratio of methylated reads (with ≥1 mCpG) to total reads mapped to a given promoter region. <strong>CAMDA</strong> quantifies the concurrence of active DNA methylation and demethylation within the same cell by dissecting reads from bisulfite sequencing.
       </p>
-      <div class="citation-card">
+    </section>
+
+    <!-- Citation (hover to lift) -->
+    <section id="citation" class="section container reveal">
+      <h2 class="eyebrow">Citation</h2>
+      <div class="citation-card glass float-card">
         <p>
           <strong>Name</strong>, et&nbsp;al. Correcting methylation heterogeneity improves epigenome-wide discovery of phenotype-associated CpGs.
           <em>Preprint/Journal</em>, 2025. DOI: <span class="doi">TBD</span>.
         </p>
         <button class="btn ghost" id="copyCitationBtn" aria-label="Copy citation">Copy citation</button>
+        <div id="toast" class="toast" role="status" aria-live="polite" aria-atomic="true"></div>
       </div>
     </section>
   </main>
 
   <footer class="site-footer">
     <div class="container">
-      <p>© <span id="year"></span> Heterogeneity-Corrected EWAS Explorer. All rights reserved.</p>
+      <p>© <span id="year"></span> Heterogeneity-Adjusted EWAS Explorer. All rights reserved.</p>
     </div>
   </footer>
 </body>

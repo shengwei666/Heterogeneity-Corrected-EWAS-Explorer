@@ -2,10 +2,10 @@
 <html lang="en">
 <head>
   <meta charset="utf-8" />
-  <title>Download • Heterogeneity-Corrected EWAS Explorer</title>
+  <title>Download • Heterogeneity-Adjusted EWAS Explorer</title>
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <meta name="description" content="Download CSV exports by Phenotype, Type, and Method." />
-  <link rel="icon" href="assets/img/logo.jpg" type="image/jpg+xml">
+  <meta name="description" content="Download EWAS meta-analysis result files (CSV)." />
+  <link rel="icon" href="assets/img/logo.jpg" type="image/jpeg">
   <link rel="stylesheet" href="assets/styles.css" />
   <script defer src="assets/theme.js"></script>
   <script defer src="assets/download.js"></script>
@@ -15,9 +15,9 @@
     <div class="nav-wrap container">
       <a class="brand" href="index.html#home">
         <img src="assets/img/logo.jpg" alt="Logo" class="logo" />
-        <span class="brand-text">Heterogeneity-Corrected EWAS Explorer</span>
+        <span class="brand-text gradient-text">Heterogeneity-Adjusted EWAS Explorer</span>
       </a>
-      <nav class="nav">
+      <nav class="nav" aria-label="primary">
         <a href="index.html#home" class="nav-link">Home</a>
         <a href="download.html" class="nav-link active" aria-current="page">Download</a>
         <a href="explore.html" class="nav-link">Explore</a>
@@ -28,21 +28,23 @@
   </header>
 
   <main class="container section">
-    <h1 class="page-title">Download Data</h1>
-    <p class="page-subtitle">Choose a <strong>Phenotype</strong>, <strong>Type</strong> (Continuous / Binary / Survival), and <strong>Method</strong> (Beta / CHALM / CAMDA) to download the corresponding CSV manifest.</p>
+    <h1 class="page-title">Download Datasets</h1>
+    <p class="page-subtitle">
+      Browse and download all available meta-analysis result files (CSV) listed in <code>data/downloads/index.json</code>.
+    </p>
 
     <!-- Filters -->
     <form id="dlFilters" class="filters">
       <div class="field">
-        <label for="dlPhenotype">Phenotype</label>
-        <select id="dlPhenotype" class="select">
+        <label for="fPhenotype">Phenotype</label>
+        <select id="fPhenotype" class="select">
           <option value="">All</option>
         </select>
       </div>
 
       <div class="field">
-        <label for="dlType">Type</label>
-        <select id="dlType" class="select">
+        <label for="fType">Type</label>
+        <select id="fType" class="select">
           <option value="">All</option>
           <option>Continuous</option>
           <option>Binary</option>
@@ -51,8 +53,8 @@
       </div>
 
       <div class="field">
-        <label for="dlMethod">Method</label>
-        <select id="dlMethod" class="select">
+        <label for="fMethod">Method</label>
+        <select id="fMethod" class="select">
           <option value="">All</option>
           <option>Beta</option>
           <option>CHALM</option>
@@ -60,18 +62,39 @@
         </select>
       </div>
 
-      <button type="button" id="dlResetBtn" class="btn ghost">Reset</button>
+      <div class="field grow">
+        <label for="fQuery">Search</label>
+        <input id="fQuery" class="input" type="search" placeholder="Search filename…" />
+      </div>
+
+      <button type="button" id="dlReset" class="btn ghost">Reset</button>
     </form>
 
-    <!-- Results -->
-    <div id="dlResults" class="cards">
-      <!-- cards populated by JS -->
+    <!-- Table -->
+    <div class="table-wrap">
+      <table class="table" id="dlTable">
+        <thead>
+          <tr>
+            <th>Filename</th>
+            <th>Phenotype</th>
+            <th>Type</th>
+            <th>Method</th>
+            <th>Size</th>
+            <th>Link</th>
+          </tr>
+        </thead>
+        <tbody></tbody>
+      </table>
+    </div>
+
+    <div class="table-footer">
+      <div id="dlCount"></div>
     </div>
   </main>
 
   <footer class="site-footer">
     <div class="container">
-      <p>© <span id="year"></span> Heterogeneity-Corrected EWAS Explorer.</p>
+      <p>© <span id="year"></span> Heterogeneity-Adjusted EWAS Explorer.</p>
     </div>
   </footer>
 </body>

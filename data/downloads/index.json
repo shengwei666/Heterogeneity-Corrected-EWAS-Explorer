@@ -1,0 +1,16 @@
+{
+  "files": [
+    "AD_Survival_Beta.csv",
+    "AD_Survival_CAMDA.csv",
+    "AD_Survival_CHALM.csv",
+    "BMI_Continuous_Beta.csv",
+    "BMI_Continuous_CAMDA.csv",
+    "BMI_Continuous_CHALM.csv",
+    "CAD_Binary_Beta.csv",
+    "CAD_Binary_CAMDA.csv",
+    "CAD_Binary_CHALM.csv",
+    "T2D_Binary_Beta.csv",
+    "T2D_Binary_CAMDA.csv",
+    "T2D_Binary_CHALM.csv"
+  ]
+}
